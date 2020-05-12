@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-image: url('../imagens/fundo-site.jpg');
     background-size: auto 100vh;
@@ -5,42 +10,80 @@ body{
     height: 100vh;
 }
 
+@media (min-width: 400px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 22px;
+    }
+  }
+ 
+  header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 .menu {
   background-color: white;
-  
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .menu ul {
   display: flex;
-  justify-content: space-around;  
-  color: INDIGO;  
-  height: 30px;
-  padding: 20px 10px 5px 5px;
+  justify-content: space-around;   
 }
 
 .menu li {
     list-style: none;
-    font-size: 18px;
-    color: teal;
 }
 
-a {
-    text-decoration: none; 
+.menu a {
+    color: teal;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
 }
 
 a:hover{
     text-decoration: underline;
 }
 
-.site-subtitle,
-.site-title{
+.site-title {
     color: whitesmoke;
-    font-weight: bold;
-    font-size: 36px;
     text-align: center;
-}
+  }
+  
+  .site-subtitle {
+    color: silver;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2em;
+  }
 
-.site-subtitle{
-    font-style:italic;
-
+section h2{
+    color: whitesmoke;
+    text-align: left;
 }
+  .img-portfolio {
+    height: auto;
+    width: auto;
+  }
+
+  figure{
+      margin: 10px;
+      top:10px;
+      padding: 5px;
+      
+  }
+
+  
