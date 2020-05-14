@@ -6,7 +6,7 @@
 body{
     background-image: url('../imagens/fundo-site.jpg');
     background-size: auto 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;;
     height: 100vh;
 }
 
@@ -53,37 +53,82 @@ body{
     text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
-}
-
 .site-title {
-    color: whitesmoke;
-    text-align: center;
-  }
-  
-  .site-subtitle {
-    color: silver;
-    font-style: italic;
-    font-weight: lighter;
-    text-align: center;
-    font-size: 2em;
-  }
-
-section h2{
-    color: whitesmoke;
-    text-align: left;
+  color: whitesmoke;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4em;
+  line-height: 1em;
+  margin-bottom: 20px;
+  text-align: center;
 }
-  .img-portfolio {
-    height: auto;
-    width: auto;
+
+.site-subtitle {
+  color: silver;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contato,
+.portfolio {
+  padding: 1em;
+}
+
+.contato h2,
+.portfolio h2 {
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: 2.2em;
+  margin-bottom: .5em;
+}
+
+ .grid {
+  color: silver;
+  display: grid;
+  gap: 1em;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .contato,
+  .portfolio {
+    padding: 3em 2em 2em;
+    height: 100vh;
   }
 
-  figure{
-      margin: 10px;
-      top:10px;
-      padding: 5px;
-      
+   .grid {
+    grid-template-columns: 200px 200px;
+    height: calc(100vh - 4.5em - 75px);
+  }
+}
+
+@media (min-width: 940px) {
+  .contato,
+  .portfolio {
+    padding: 2em;
   }
 
-  
+   .grid {
+    grid-template-columns: repeat(4, 200px);
+    height: calc(100vh - 8em - 75px);
+  }
+}
+
+.portfolio figcaption {
+  font-weight: bold;
+}
+
+.img-portfolio {
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+  width: 180px;
+}
+
+.icons a {
+  color: white;
+  font-size: 6em;
+}
